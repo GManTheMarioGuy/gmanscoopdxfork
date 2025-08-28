@@ -1,3 +1,9 @@
+gmanscoopdxfork Developers:
+    GManTheMarioGuy
+
+gmanscoopdxfork Contributors:
+    (None yet)
+
 sm64coopdx Developers:
     Agent X
     AngelicMiracles
@@ -80,4 +86,4 @@ Sounds:
 
 The custom models, levels, textures, animations, and warps use DynOS. DynOS was created by PeachyPeach.
 
-sm64coopdx was built on top of sm64ex-coop, which was built on top of sm64ex, which was built on top of the sm64 decomp project.
+gmanscoopdxfork was built on top of sm64coopdx, which was built on top of sm64ex-coop, which was built on top of sm64ex, which was built on top of the sm64 decomp project.
