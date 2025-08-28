@@ -16,6 +16,13 @@ If you're on Windows, OpenGL is recommended.
 
 Dragging the ROM on the game is only necessary the first time you open the game (you don't have to do it after a new update gets released).
 
+## Mods
+Modding works the exact same way it does in sm64coopdx, considering this is a fork of sm64coopdx.
+
+Adding mods also works the exact same way it does in sm64coopdx.
+
+Only difference is that if you're manually adding mods, the folder is named `gmanscoopdxfork`. If you've played sm64coopdx or sm64ex-coop in the past, mods from the `sm64ex-coop` or `sm64coopdx` folder will show up in gmanscoopdxfork.
+
 ## How to host
 To host a game, press the `Host` button on the main menu.
 
