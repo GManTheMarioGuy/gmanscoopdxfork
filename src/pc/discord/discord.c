@@ -12,7 +12,7 @@
 
 #define MAX_LAUNCH_CMD (MAX_PATH + 2)
 
-#define APPLICATION_ID_COOPDX 1159627283506679839
+#define APPLICATION_ID_COOPDX 1410716036789178378
 
 struct DiscordApplication app = { 0 };
 static bool sFatalShown = false;
