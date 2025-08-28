@@ -223,7 +223,7 @@ const char *sys_user_path(void)
         return NULL;
     }
 
-    LPCWSTR subdirs[] = { L"sm64coopdx", L"sm64ex-coop", L"sm64coopdx", NULL };
+    LPCWSTR subdirs[] = { L"sm64coopdx", L"sm64ex-coop", L"gmanscoopdxfork", NULL };
 
     for (int i = 0; NULL != subdirs[i]; i++)
     {
@@ -301,7 +301,7 @@ const char *sys_user_path(void) {
     static char path[SYS_MAX_PATH] = { 0 };
     if ('\0' != path[0]) { return path; }
 
-    char const *subdirs[] = { "sm64coopdx", "sm64ex-coop", "sm64coopdx", NULL };
+    char const *subdirs[] = { "sm64coopdx", "sm64ex-coop", "gmanscoopdxfork", NULL };
 
     char *sdlPath = NULL;
     for (int i = 0; NULL != subdirs[i]; i++)

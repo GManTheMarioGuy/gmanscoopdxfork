@@ -1,12 +1,12 @@
 #ifndef VERSION_H
 #define VERSION_H
 
-#define SM64COOPDX_VERSION "v1.3.2"
+#define SM64COOPDX_VERSION "v1.0"
 
 // internal version
 #define VERSION_TEXT "v"
-#define VERSION_NUMBER 40
-#define MINOR_VERSION_NUMBER 2
+#define VERSION_NUMBER 1
+#define MINOR_VERSION_NUMBER 0
 
 #if defined(VERSION_JP)
 #define VERSION_REGION "JP"
@@ -19,14 +19,14 @@
 #endif
 
 #ifdef DEVELOPMENT
-#define GAME_NAME   "sm64coopdx-dev"
-#define WINDOW_NAME "Super Mario 64 Coop Deluxe (DEV)"
+#define GAME_NAME   "gmanscoopdxfork-dev"
+#define WINDOW_NAME "GMan's Coop Deluxe Fork (DEV)"
 #elif !defined(VERSION_US)
-#define GAME_NAME "sm64coopdx-intl"
-#define WINDOW_NAME "Super Mario 64 Coop Deluxe (INTL)"
+#define GAME_NAME "gmanscoopdxfork-intl"
+#define WINDOW_NAME "GMan's Coop Deluxe Fork (INTL)"
 #else
-#define GAME_NAME "sm64coopdx"
-#define WINDOW_NAME "Super Mario 64 Coop Deluxe"
+#define GAME_NAME "gmanscoopdxfork"
+#define WINDOW_NAME "GMan's Coop Deluxe Fork"
 #endif
 
 #define MAX_VERSION_LENGTH 128

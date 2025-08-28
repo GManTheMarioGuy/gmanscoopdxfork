@@ -3,7 +3,7 @@ name: Build coop
 on:
     workflow_dispatch:
     push:
-        branches: [ dev ]
+        branches: [ main ]
 
 jobs:
     build-linux:
@@ -27,16 +27,17 @@ jobs:
                 g++ -std=c++17 -o hash_file hash_file.cpp
                 echo "::notice ::$(./hash_file ../build/us_pc/sm64coopdx)"
             
-            - name: Zip the game
+            - name: Rename and zip the game
               run: |
                 cd ./build/us_pc
-                zip -r sm64coopdx_Linux.zip dynos lang mods palettes libdiscord_game_sdk.so sm64coopdx
+                mv sm64coopdx gmanscoopdxfork
+                zip -r gmanscoopdxfork_Linux.zip dynos lang mods palettes libdiscord_game_sdk.so gmanscoopdxfork
 
             - name: Upload artifact
               uses: actions/upload-artifact@v4
               with:
-                name: sm64coopdx-linux
-                path: ./build/us_pc/sm64coopdx_Linux.zip
+                name: gmanscoopdxfork-linux
+                path: ./build/us_pc/gmanscoopdxfork_Linux.zip
     
     build-steamos:
         if: ${{ github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[build]') }}
@@ -59,16 +60,17 @@ jobs:
                 g++ -std=c++17 -o hash_file hash_file.cpp
                 echo "::notice ::$(./hash_file ../build/us_pc/sm64coopdx)"
             
-            - name: Zip the game
+            - name: Rename and zip the game
               run: |
                 cd ./build/us_pc
-                zip -r sm64coopdx_SteamOS.zip dynos lang mods palettes libdiscord_game_sdk.so sm64coopdx
+                mv sm64coopdx gmanscoopdxfork
+                zip -r gmanscoopdxfork_SteamOS.zip dynos lang mods palettes libdiscord_game_sdk.so gmanscoopdxfork
 
             - name: Upload artifact
               uses: actions/upload-artifact@v4
               with:
-                name: sm64coopdx-steamos
-                path: ./build/us_pc/sm64coopdx_SteamOS.zip
+                name: gmanscoopdxfork-steamos
+                path: ./build/us_pc/gmanscoopdxfork_SteamOS.zip
 
     build-windows-opengl:
         if: ${{ github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[build]') }}
@@ -109,16 +111,17 @@ jobs:
                 g++ -std=c++17 -o hash_file.exe hash_file.cpp
                 echo "::notice ::$(./hash_file.exe ../build/us_pc/sm64coopdx.exe)"
             
-            - name: Zip the game
+            - name: Rename and zip the game
               run: |
                 cd ./build/us_pc
-                zip -r sm64coopdx_Windows_OpenGL.zip dynos lang mods palettes coop.map discord_game_sdk.dll sm64coopdx.exe
+                mv sm64coopdx.exe gmanscoopdxfork.exe
+                zip -r gmanscoopdxfork_Windows_OpenGL.zip dynos lang mods palettes coop.map discord_game_sdk.dll gmanscoopdxfork.exe
 
             - name: Upload artifact
               uses: actions/upload-artifact@v4
               with:
-                name: sm64coopdx-windows-opengl
-                path: ./build/us_pc/sm64coopdx_Windows_OpenGL.zip
+                name: gmanscoopdxfork-windows-opengl
+                path: ./build/us_pc/gmanscoopdxfork_Windows_OpenGL.zip
 
     build-windows-directx:
         if: ${{ github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[build]') }}
@@ -159,16 +162,17 @@ jobs:
                 g++ -std=c++17 -o hash_file.exe hash_file.cpp
                 echo "::notice ::$(./hash_file.exe ../build/us_pc/sm64coopdx.exe)"
             
-            - name: Zip the game
+            - name: Rename and zip the game
               run: |
                 cd ./build/us_pc
-                zip -r sm64coopdx_Windows_DirectX.zip dynos lang mods palettes coop.map discord_game_sdk.dll sm64coopdx.exe
+                mv sm64coopdx.exe gmanscoopdxfork.exe
+                zip -r gmanscoopdxfork_Windows_DirectX.zip dynos lang mods palettes coop.map discord_game_sdk.dll gmanscoopdxfork.exe
 
             - name: Upload artifact
               uses: actions/upload-artifact@v4
               with:
-                name: sm64coopdx-windows-directx
-                path: ./build/us_pc/sm64coopdx_Windows_DirectX.zip
+                name: gmanscoopdxfork-windows-directx
+                path: ./build/us_pc/gmanscoopdxfork_Windows_DirectX.zip
 
     build-macos-arm:
         if: ${{ github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[build]') }}
@@ -195,16 +199,17 @@ jobs:
                 g++ -std=c++17 -o hash_file hash_file.cpp
                 echo "::notice ::$(./hash_file ../build/us_pc/sm64coopdx.app/Contents/MacOS/sm64coopdx)"
 
-            - name: Zip the .app bundle
+            - name: Rename and zip the .app bundle
               run: |
                 cd ./build/us_pc
-                zip -r sm64coopdx_macOS_ARM.zip sm64coopdx.app
+                mv sm64coopdx.app gmanscoopdxfork.app
+                zip -r gmanscoopdxfork_macOS_ARM.zip gmanscoopdxfork.app
             
             - name: Upload artifact
               uses: actions/upload-artifact@v4
               with:
-                name: sm64coopdx-macos-arm
-                path: ./build/us_pc/sm64coopdx_macOS_ARM.zip
+                name: gmanscoopdxfork-macos-arm
+                path: ./build/us_pc/gmanscoopdxfork_macOS_ARM.zip
 
     build-macos-intel:
         if: ${{ github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[build]') }}
@@ -231,13 +236,14 @@ jobs:
                 g++ -std=c++17 -o hash_file hash_file.cpp
                 echo "::notice ::$(./hash_file ../build/us_pc/sm64coopdx.app/Contents/MacOS/sm64coopdx)"
 
-            - name: Zip the .app bundle
+            - name: Rename and zip the .app bundle
               run: |
                 cd ./build/us_pc
-                zip -r sm64coopdx_macOS_Intel.zip sm64coopdx.app
+                mv sm64coopdx.app gmanscoopdxfork.app
+                zip -r gmanscoopdxfork_macOS_Intel.zip gmanscoopdxfork.app
             
             - name: Upload artifact
               uses: actions/upload-artifact@v4
               with:
-                name: sm64coopdx-macos-intel
-                path: ./build/us_pc/sm64coopdx_macOS_Intel.zip
+                name: gmanscoopdxfork-macos-intel
+                path: ./build/us_pc/gmanscoopdxfork_macOS_Intel.zip

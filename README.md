@@ -1,18 +1,28 @@
-![sm64coopdx Logo](textures/segment2/custom_coopdx_logo.rgba32.png)
+# gmanscoopdxfork
+GMan's fork of [sm64coopdx](https://github.com/coop-deluxe/sm64coopdx)
 
-sm64coopdx is an online multiplayer project for the Super Mario 64 PC port that synchronizes all entities and every level for multiple players. The project was started by the Coop Deluxe Team. The purpose is to actively maintain and improve, but also continue sm64ex-coop, created by djoslin0. More features, customization, and power to the Lua API allow modders and players to enjoy Super Mario 64 more than ever!
+This fork lets you play with up to 64 people instead of 16!
 
-Feel free to report bugs or contribute to the project. 
+This is not a competitor to sm64coopdx, this is simply something I work on for fun.
 
-## Initial Goal (Accomplished)
-Create a mod for the PC port where multiple people can play together online.
+## How to host
+To host a game, press the `Host` button on the main menu.
 
-Unlike previous multiplayer projects, this one synchronizes enemies and events. This allows players to interact with the same world at the same time.
+You will have a port field in the `Host` menu that will tell the game what port to use when you host the game.
 
-Interestingly enough though, the goal of the project has slowly evolved over time from simply just making a Super Mario 64 multiplayer mod to constantly maintaining and improving the project (notably the Lua API.)
+You will need to forward a port in your router to connect to each other online.
 
-## Lua
-sm64coopdx is moddable via Lua, similar to Roblox and Garry's Mod's Lua APIs. To get started, click [here](docs/lua/lua.md) to see the Lua documentation.
+Instructions on how to forward a port: https://www.hellotech.com/guide/for/how-to-port-forward
 
-## Wiki
-The wiki is made using GitHub's wiki feature, you can go to the wiki tab or click [here](https://github.com/coop-deluxe/sm64coopdx/wiki).
+The default port is `7777`. The protocol to forward is `UDP`.
+
+You can open two windows and connect to yourself by using the IP address `127.0.0.1`.
+
+## How to join
+To join a game, press the `Join` button on the main menu.
+
+The format for joining is `IP:Port`
+
+You'll either use `127.0.0.1` for connecting to yourself, or somebody else's IP to connect to somebody else.
+
+Example: If your friend's IP is `127.0.0.1` and they forwarded port `7777`, to join them you would enter this in the join field: `127.0.0.1:7777`.

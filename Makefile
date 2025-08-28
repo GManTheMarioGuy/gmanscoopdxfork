@@ -45,7 +45,7 @@ ENHANCE_LEVEL_TEXTURES ?= 1
 # Enable Discord Game SDK (used for Discord invites)
 DISCORD_SDK ?= 1
 # Enable CoopNet SDK (used for CoopNet server hosting)
-COOPNET ?= 1
+COOPNET ?= 0
 # Enable docker build workarounds
 DOCKERBUILD ?= 0
 # Sets your optimization level for building.
@@ -60,7 +60,7 @@ ASAN ?= 0
 # Compile headless
 HEADLESS ?= 0
 # Enable Game ICON
-ICON ?= 1
+ICON ?= 0
 # Use .app (for macOS)
 USE_APP ?= 1
 # Minimum macOS Version

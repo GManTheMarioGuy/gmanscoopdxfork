@@ -11,7 +11,7 @@
 #include "pc/network/version.h"
 #include "pc/loading.h"
 
-#define URL "https://raw.githubusercontent.com/coop-deluxe/sm64coopdx/refs/heads/main/src/pc/network/version.h"
+#define URL "https://raw.githubusercontent.com/GManTheMarioGuy/gmanscoopdxfork/refs/heads/main/src/pc/network/version.h"
 #define VERSION_IDENTIFIER "#define SM64COOPDX_VERSION \""
 
 static char sVersionUpdateTextBuffer[256] = { 0 };
