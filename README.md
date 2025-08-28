@@ -10,7 +10,7 @@ To play, start by downloading the game.
 
 Download the game here: https://github.com/GManTheMarioGuy/gmanscoopdxfork/releases/latest
 
-Choose the build that corresponds to your computer.
+Choose the build that corresponds to your operating system.
 
 If you're on Windows, OpenGL is recommended.
 
