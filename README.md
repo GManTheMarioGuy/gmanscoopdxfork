@@ -14,7 +14,7 @@ Choose the build that corresponds to your computer.
 
 If you're on Windows, OpenGL is recommended.
 
-Dragging the ROM on the game is only required the first time you open the game (you don't have to do it after a new update gets released).
+Dragging the ROM on the game is only necessary the first time you open the game (you don't have to do it after a new update gets released).
 
 ## How to host
 To host a game, press the `Host` button on the main menu.
