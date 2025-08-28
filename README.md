@@ -5,6 +5,17 @@ This fork lets you play with up to 64 people instead of 16!
 
 This is not a competitor to sm64coopdx, this is simply something I work on for fun.
 
+## How to play
+To play, start by downloading the game.
+
+Download the game here: https://github.com/GManTheMarioGuy/gmanscoopdxfork/releases/latest
+
+Choose the build that corresponds to your computer.
+
+If you're on Windows, OpenGL is recommended.
+
+Dragging the ROM on the game is only required the first time you open the game (you don't have to do it after a new update gets released).
+
 ## How to host
 To host a game, press the `Host` button on the main menu.
 
