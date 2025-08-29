@@ -19,7 +19,7 @@ Dragging the ROM on the game is only necessary the first time you open the game 
 ## Mods
 Modding works the exact same way it does in sm64coopdx, considering this is a fork of sm64coopdx.
 
-Adding mods also works the exact same way it does in sm64coopdx.
+Installing mods also works the exact same way it does in sm64coopdx.
 
 ## How to host
 To host a game, press the `Host` button on the main menu.
