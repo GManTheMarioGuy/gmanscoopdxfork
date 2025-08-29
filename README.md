@@ -1,3 +1,10 @@
+## Note
+This project is no longer worked on. Despite that, this project will still remain usable.
+
+If you want 64 player MarioHunt for example, this project is still a great option.
+
+I currently work on a project that brings sm64coopdx to older devices. Check it out [here](https://github.com/GManTheMarioGuy/sm64coopdx).
+
 # gmanscoopdxfork
 GMan's fork of [sm64coopdx](https://github.com/coop-deluxe/sm64coopdx)
 
